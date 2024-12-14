@@ -1,0 +1,16 @@
+package com.problems.string;
+
+import java.util.stream.Collectors;
+
+public class RemoveDuplicatesFromString {
+
+  /*  Remove duplicates characters from a string. Output should be a string printed in existing sequence.
+            I/P = “java programming”
+    O/P = "jav progmin"*/
+
+    public static void main(String[] args) {
+        String str = "Java Programmming";
+        String result = str.chars().mapToObj(s -> (char) s).distinct().map(String::valueOf).collect(Collectors.joining());
+        System.out.println(result);
+    }
+}
